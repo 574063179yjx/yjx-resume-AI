@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import { createRoot } from 'react-dom/client'
 import { ArrowRight, BriefcaseBusiness, Check, Code2, GraduationCap, Layers, Menu, PenTool, TrendingUp, X } from 'lucide-react'
+import '@fontsource/space-grotesk/latin-400.css'
+import '@fontsource/space-grotesk/latin-500.css'
+import '@fontsource/space-grotesk/latin-600.css'
+import '@fontsource/space-grotesk/latin-700.css'
 import { siteData as d } from './content'
 import './styles.css'
 
@@ -19,14 +23,16 @@ async function saveResume() {
 async function saveFile(fileUrl, fileName) {
 
   // Chromium 系浏览器支持弹出系统“另存为”，由用户选择保存路径。
+  // 注意：showSaveFilePicker 必须在用户激活（点击）的瞬时窗口内调用，
+  // 因此先弹窗拿到文件句柄，再去 fetch 文件内容写入，避免 await 让出栈导致激活过期。
   if ('showSaveFilePicker' in window) {
     try {
-      const response = await fetch(fileUrl)
-      if (!response.ok) throw new Error('文件读取失败')
       const fileHandle = await window.showSaveFilePicker({
         suggestedName: fileName,
         types: [{ description: 'PDF 文档', accept: { 'application/pdf': ['.pdf'] } }],
       })
+      const response = await fetch(fileUrl)
+      if (!response.ok) throw new Error('文件读取失败')
       const writable = await fileHandle.createWritable()
       if (response.body) await response.body.pipeTo(writable)
       else { await writable.write(await response.blob()); await writable.close() }

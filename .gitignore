@@ -4,3 +4,4 @@ dist/
 resource/
 tmp/
 *.log
+.gh-config/

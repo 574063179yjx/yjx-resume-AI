@@ -1,5 +1,14 @@
+resource
+resource/**
 resource/
-tmp/
-dist/
-node_modules/
+tmp
+tmp/**
+dist
+dist/**
+node_modules
+node_modules/**
+.openai
+.openai/**
+.git
+.git/**
 *.log
