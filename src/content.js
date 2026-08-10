@@ -60,7 +60,7 @@ export const siteData = {
       },
     },
     {
-      title: 'Shopping-Agent', description: '让用户不用手写 SQL，也能像聊天一样从企业内部数据仓库里获取想要的分析结果。项目链接：http://116.62.48.177/', image: 'https://picgocloud.com/m/14bef561-9423-4075-a0cd-4ce399079aa1.jpg', url: '#',
+      title: 'Shopping-Agent', description: '让用户不用手写 SQL，也能像聊天一样从企业内部数据仓库里获取想要的分析结果。项目链接：http://116.62.48.177/', image: 'https://picgocloud.com/m/c5f9a792-9492-45f8-89a5-247fed9d1303.jpg', url: '#',
       detail: {
         layout: 'system', eyebrow: 'AI DATA AGENT · PROJECT',
         summary: '让业务人员用自然语言完成数据查询。这个项目真正要解决的不是“让大模型写 SQL”，而是如何给模型提供准确的数据语境，并让生成结果可校验、可纠错、可执行。',
