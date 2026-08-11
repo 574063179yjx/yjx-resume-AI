@@ -36,7 +36,7 @@ export const siteData = {
       { title: '在校经历', description: '作为编剧和导演，负责全国高校抖肩舞视频接力活动的剧本制作及分镜设计，以及组织 30 人完成拍摄任务。' },
     ],
     resumeUrl: '/resume.pdf',
-    resumeFileName: '杨建新-13152002516-yjx574063179@163.com-运营-AI.pdf',
+    resumeFileName: '杨建新-13152002516-1.pdf',
   },
   services: [
     { icon: 'TrendingUp', title: '用户增长策略', points: ['具备项目从 0 到 1 的增长经验', '能够从增长模型、抓手体系、标签体系三方面搭建用户增长系统', '了解生命周期、RFM 等基本用户增长模型'] },
